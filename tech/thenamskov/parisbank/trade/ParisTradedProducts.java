@@ -1,6 +1,7 @@
-package tech.thenamskov.parisbank.product;
+package tech.thenamskov.parisbank.trade;
 
 import tech.thenamskov.parisbank.exception.*;
+import tech.thenamskov.parisbank.product.*;
 /**
  * Interface used to audit products that have been registered
  * for tracking. Products can be registered against the
