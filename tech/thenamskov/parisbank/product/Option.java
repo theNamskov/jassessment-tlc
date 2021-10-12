@@ -13,6 +13,7 @@ public class Option extends Product {
     this.ticker = ticker;
     this.validForDays = validForDays;
     price(exchange, ticker, validForDays);
+    setId();
   }
 
   public String exchange() {

@@ -12,6 +12,7 @@ public class Stock extends Product {
     this.exchange = exchange;
     this.ticker = ticker;
     price(exchange, ticker);
+    setId();
   }
 
   public String exchange() {

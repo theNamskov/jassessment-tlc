@@ -14,6 +14,8 @@ public class Future extends Product {
     this.contractCode = contractCode;
     this.month = month;
     this.year = year;
+    price(exchange, contractCode, month, year);
+    setId();
   }
 
   public String exchange() {

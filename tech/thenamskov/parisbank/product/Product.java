@@ -2,10 +2,21 @@ package tech.thenamskov.parisbank.product;
 
 public abstract class Product implements ProductPricingService {
   
-  private double value;
+  public static int count = 0;
 
-  double value() {
+  private double value;
+  private int id;
+
+  public double value() {
     return value;
+  }
+
+  public int id() {
+    return id;
+  }
+
+  protected void setId() {
+    id = ++count;
   }
 
   protected void setValue(double value) {
