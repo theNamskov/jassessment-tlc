@@ -31,4 +31,16 @@ public class Future extends Product {
   public int year() {
     return year;
   }
+
+  public double price(String exchange, String contractCode, int month, int year) {
+    if(exchange != "" && contractCode != "") {
+      double val = 0.00;
+      if(month == 11) val+=40;
+      val += 800;
+
+      setValue(val);
+    }
+
+    return value();
+  }
 }

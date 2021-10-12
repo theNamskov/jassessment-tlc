@@ -6,10 +6,12 @@ public class Stock extends Product {
   private String ticker,
                  exchange;
 
+  
 
-  public Stock(String ticker, String exchange) {
-    this.ticker = ticker;
+  public Stock(String exchange, String ticker) {
     this.exchange = exchange;
+    this.ticker = ticker;
+    price(exchange, ticker);
   }
 
   public String exchange() {
@@ -18,5 +20,11 @@ public class Stock extends Product {
 
   public String ticker() {
     return ticker;
+  }
+
+  public double price(String exchange, String ticker) {
+    if(exchange != "" && ticker != "")
+    setValue(500.00);
+    return value();
   }
 }

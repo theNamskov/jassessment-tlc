@@ -12,6 +12,7 @@ public class Option extends Product {
     this.exchange = exchange;
     this.ticker = ticker;
     this.validForDays = validForDays;
+    price(exchange, ticker, validForDays);
   }
 
   public String exchange() {
@@ -24,5 +25,22 @@ public class Option extends Product {
 
   public int validForDays() {
     return validForDays;
+  }
+
+  public double price(String exchange, String ticker, int validForDays) {
+    if(exchange != "" && ticker != "") {
+      if(validForDays > 0) {
+        if(validForDays > 10) {
+          setValue(400.00);
+        }
+
+        if(validForDays < 10) {
+          setValue(200.00);
+        }
+
+      } else setValue(100.00);
+    }
+
+    return value();
   }
 }

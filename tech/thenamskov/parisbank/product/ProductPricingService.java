@@ -1,4 +1,4 @@
-package tech.thenamskov.parisbank.pricing;
+package tech.thenamskov.parisbank.product;
 
 public interface ProductPricingService {
     double price(String exchange, String ticker);
